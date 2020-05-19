@@ -1,2 +1,2 @@
-x = pow((3**4 + 5*(6**7))/8,0.5)
-print("%.3f"%x)
+for i in range(3):
+    print(i)
