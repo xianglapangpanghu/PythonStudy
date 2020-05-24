@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+import time
 
 def getFirstHTML(url, page): #获取无修列表html代码
     try:
@@ -37,7 +38,7 @@ def printVideo(WXlist, LFlist, infolist, page):   #输出符合条件的视频
             for j in range(len(LFlist)):
                 if WXlist[i] == LFlist[j]:
                     infolist.append(WXlist[i])              
-        print(infolist)
+        return infolist
     except:
         return '{}合并错误'.format(page)
 
@@ -50,12 +51,6 @@ def getVideoHTML(url):    #获取频页面HTML
     except:
         return 'error'
 
-def parseVedioHTML(): #
-    try:
-
-    except:
-def saveVideo():    #下载并保存视频
-    pass
 def main():
     infolist = []   #相同列表
     WXlist = [] #无修列表
@@ -67,7 +62,7 @@ def main():
         LFhtml = getSecondHTML(url,page)
         parseHTML(WXlist, WXhtml, page)
         parseHTML(LFlist, LFhtml, page)
-    printVideo(WXlist, LFlist, infolist, page)    
+    return printVideo(WXlist, LFlist, infolist, page)
     
 
 if __name__ == "__main__":
