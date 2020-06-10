@@ -1,10 +1,11 @@
 import numpy as np 
 from matplotlib import pyplot as plt
 
-data = np.load(r'F:\代码\np\国民经济核算季度数据.npz',allow_pickle=True)
+data = np.load(r'D:\www\国民经济核算季度数据.npz',allow_pickle=True)
 plt.rcParams['font.sans-serif']='SimHei'#设置中文显示
 name = data['columns']
 values = data['values']
+print(values)
 
 #直方图和饼图
 p = plt.figure(figsize=(14,14))#设置画布
