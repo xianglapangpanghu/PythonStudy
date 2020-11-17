@@ -75,7 +75,7 @@ def get():
         print(infolist)
 
     m = np.array(infolist)
-    np.save(r'爬虫\ooxx\infolist.npy',m)
+    np.save(r'PythonStudy\爬虫\ooxx\infolist.npy',m)
 
 if __name__ == "__main__":
     get()

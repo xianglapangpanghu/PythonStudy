@@ -11,7 +11,7 @@ def getHTMLTEXT(url):#获取网页
     except:
         return " "
 
-def fillUnivList(ulist, html):#解析网页
+def fillUnivList(ulist, html):#解析网页1
     soup = BeautifulSoup(html, "html.parser")
     for tr in soup.find('tbody').children:
         if isinstance(tr, bs4.element.Tag):

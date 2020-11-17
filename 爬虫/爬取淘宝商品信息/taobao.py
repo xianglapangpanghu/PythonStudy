@@ -34,7 +34,7 @@ def printGoodsList(ilt):
         count = count + 1
         print(tplt.format(count, g[0], g[1]))
 if __name__ == "__main__":
-    goods = "书包"
+    goods = '设备'
     depth = 3
     start_url = "https://s.taobao.com/search?q=" + goods
     infolist = []

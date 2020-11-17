@@ -3,7 +3,6 @@ import requests
 import re
 from bs4 import BeautifulSoup
 from tqdm import tqdm
-import you_get
 import time
 import os
 import numpy as np
@@ -86,7 +85,7 @@ def saveVedio(downID, downPage, infolist):      #下载并存储视频
         print("存储失败")
 
 def main():
-    a = np.load('爬虫\\ooxx\\infolist.npy', allow_pickle=True)
+    a = np.load('PythonStudy\\爬虫\\ooxx\\infolist.npy', allow_pickle=True)
     infolist = a.tolist() #满足条件的视频列表
     downID = []     #视频下载ID
     downPage = []   #视频集数
@@ -118,10 +117,10 @@ def main():
             pass
     print(downID)
     m = np.array(downID)
-    np.save(r'爬虫\ooxx\downID.npy',m)
+    np.save(r'PythonStudy\爬虫\ooxx\downID.npy',m)
 
     m = np.array(downPage)
-    np.save(r'爬虫\ooxx\downPage.npy',m)
+    np.save(r'PythonStudy\爬虫\ooxx\downPage.npy',m)
     saveVedio(downID, downPage, infolist)   #下载存储视频
 
 
