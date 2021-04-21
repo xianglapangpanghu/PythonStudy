@@ -1,0 +1,1 @@
+print(type(eval('3.2')))
