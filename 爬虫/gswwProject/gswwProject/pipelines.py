@@ -8,9 +8,6 @@
 from itemadapter import ItemAdapter
 
 
-class FirstprojectPipeline(object):
+class GswwprojectPipeline:
     def process_item(self, item, spider):
-        print("↓"*40)
-        print(item)
-        print("↑"*40)
         return item

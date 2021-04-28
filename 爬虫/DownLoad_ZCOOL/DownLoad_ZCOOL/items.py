@@ -6,8 +6,7 @@
 import scrapy
 
 
-class FirstprojectItem(scrapy.Item):
+class DownloadZcoolItem(scrapy.Item):
+    image_urls = scrapy.Field()
     title = scrapy.Field()
-    author = scrapy.Field()
-    dynasty = scrapy.Field()
-    content = scrapy.Field()
+    images = scrapy.Field()

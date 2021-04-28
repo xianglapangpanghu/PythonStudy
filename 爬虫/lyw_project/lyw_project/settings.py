@@ -1,4 +1,4 @@
-# Scrapy settings for FirstProject project
+# Scrapy settings for lyw_project project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'FirstProject'
+BOT_NAME = 'lyw_project'
 
-SPIDER_MODULES = ['FirstProject.spiders']
-NEWSPIDER_MODULE = 'FirstProject.spiders'
+SPIDER_MODULES = ['lyw_project.spiders']
+NEWSPIDER_MODULE = 'lyw_project.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'FirstProject (+http://www.yourdomain.com)'
+#USER_AGENT = 'lyw_project (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -39,20 +39,20 @@ ROBOTSTXT_OBEY = False
 # Override the default request headers:
 DEFAULT_REQUEST_HEADERS = {
   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0',
   'Accept-Language': 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0'
 }
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'FirstProject.middlewares.FirstprojectSpiderMiddleware': 543,
+#    'lyw_project.middlewares.LywProjectSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'FirstProject.middlewares.FirstprojectDownloaderMiddleware': 543,
+#    'lyw_project.middlewares.LywProjectDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -64,7 +64,7 @@ DEFAULT_REQUEST_HEADERS = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'FirstProject.pipelines.FirstprojectPipeline': 300,
+   'lyw_project.pipelines.LywProjectPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -87,3 +87,12 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+MYSQL_CONFIG = {
+  'DRIVER': "pymysql",
+  'HOST': "127.0.0.1",
+  'PORT': 3306,
+  'USER': "root",
+  'PASSWORD': 'root',
+  'DATABASE': 'lyw'
+}
